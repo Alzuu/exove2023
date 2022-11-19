@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <title>Loading animation</title>
+  </head>
+  <body>
+    <main>
+      <div class="options">
+        <button id="size-switch" onclick="changeSize()">
+          Change loading size (large, small)
+        </button>
+        <button id="theme-switch" onclick="changeTheme()">
+          Toggle theme (light, dark)
+        </button>
+        <button id="speed-switch" onclick="changeSpeed()">
+          Change loading speed (fast, slow)
+        </button>
+      </div>
+      <div class="container">
+        <svg
+          id="loading"
+          class="loading"
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            class="circle"
+            cx="50"
+            cy="50"
+            r="39"
+            stroke="currentColor"
+            stroke-width="22"
+          />
+          <path
+            d="M11 50a39 39 0 0 1 39-39"
+            stroke="currentColor"
+            stroke-width="22"
+          />
+        </svg>
+        <p id="loading-text" class="loading-text">Loading</p>
+      </div>
+    </main>
+  </body>
+</html>

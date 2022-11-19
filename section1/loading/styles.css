@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0
+  box-sizing: border-box;
+}
+
+/* Color variables for light and dark theme */
+html {
+  --primaryBackgroundColor: #F8D8CB;
+  --secondaryBackgroundColor: #F6A68D;
+  --primaryTextColor: #224B51;
+}
+
+html.dark {
+  --primaryBackgroundColor: #0E282A;
+  --secondaryBackgroundColor: #224B51;
+  --primaryTextColor: #F6A68D;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  min-height: 100vh;
+  font-family: system-ui;
+  background-color: var(--primaryBackgroundColor);
+  color: var(--primaryTextColor);
+}
+
+.options {
+  display: grid;
+  gap: 1rem;
+}
+
+.options > * {
+  padding: 0.8rem;
+  color: var(--primaryTextColor);
+  background-color: var(--secondaryBackgroundColor);
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.loading {
+  color: var(--primaryTextColor);
+  height: 200px;
+  width: 200px;
+  animation: spin 1100ms linear infinite;
+}
+
+.loading-sm {
+  height: 100px;
+  width: 100px;
+}
+
+.loading-slow {
+  animation: spin 2000ms linear infinite;
+}
+
+.circle {
+  opacity: 0.6;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text-none {
+  display: none;
+}
+
+.loading-text {
+  font-size: 5rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.loading-text::after {
+  content: '';
+  position: absolute;
+  animation: dots 1000ms ease-in-out infinite;
+}
+
+@keyframes dots {
+  0% {
+    content: ''
+  }
+  33% {
+    content: '.'
+  }
+  66% {
+    content: '..'
+  }
+  100% {
+    content: '...'
+  }
+}
