@@ -1,0 +1,46 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 4rem;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.arrow:hover {
+}
+
+.arrow-left {
+  left: 2rem;
+}
+
+.arrow-right {
+  right: 2rem;
+}
+
+.image {
+  width: 1000px;
+  height: 600px;
+  border-radius: 10px;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.05);
+}
