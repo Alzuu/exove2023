@@ -51,10 +51,12 @@ function App() {
       <h1>Helvetinjärvi 2022</h1>
       <section className='carousel'>
         <FiArrowLeft
+          aria-label='Previous Image'
           onClick={prevImage}
           className='arrow arrow-left'
         ></FiArrowLeft>
         <FiArrowRight
+          aria-label='Next Image'
           onClick={nextImage}
           className='arrow arrow-right'
         ></FiArrowRight>
