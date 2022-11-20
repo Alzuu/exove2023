@@ -39,7 +39,6 @@ function App() {
 
   useEffect(() => {
     document.addEventListener('keydown', changeImageWithKey)
-    console.log('fds')
     return () => document.removeEventListener('keydown', changeImageWithKey)
   }, [changeImageWithKey])
 
@@ -49,17 +48,13 @@ function App() {
   return (
     <div className='App'>
       <h1>Helvetinjärvi 2022</h1>
-      <section className='carousel'>
-        <FiArrowLeft
-          aria-label='Previous Image'
-          onClick={prevImage}
-          className='arrow arrow-left'
-        ></FiArrowLeft>
-        <FiArrowRight
-          aria-label='Next Image'
-          onClick={nextImage}
-          className='arrow arrow-right'
-        ></FiArrowRight>
+      <div className='carousel'>
+        <button onClick={prevImage} className='arrow arrow-left'>
+          <FiArrowLeft aria-label='Previous Image'></FiArrowLeft>
+        </button>
+        <button onClick={nextImage} className='arrow arrow-right'>
+          <FiArrowRight aria-label='Next Image'></FiArrowRight>
+        </button>
         {images.map((image, index) => {
           return (
             <div
@@ -76,7 +71,7 @@ function App() {
             </div>
           )
         })}
-      </section>
+      </div>
     </div>
   )
 }
