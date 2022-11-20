@@ -16,14 +16,16 @@ function App() {
 
   return (
     <div className='App'>
-      <section className='header'>
+      <header className='header'>
         <h1>Helvetinjärvi 2022</h1>
-        {darkMode ? (
-          <FiSun className='theme-toggle' onClick={toggleTheme}></FiSun>
-        ) : (
-          <FiMoon className='theme-toggle' onClick={toggleTheme}></FiMoon>
-        )}
-      </section>
+        <button className='theme-toggle' onClick={toggleTheme}>
+          {darkMode ? (
+            <FiSun aria-label='Toggle light theme'></FiSun>
+          ) : (
+            <FiMoon aria-label='Toggle dark theme'></FiMoon>
+          )}
+        </button>
+      </header>
       <ImageCarousel images={ImageHandler}></ImageCarousel>
     </div>
   )

@@ -14,9 +14,15 @@ h1 {
 
 .theme-toggle {
   margin-left: auto;
+  background: none;
+  border: none;
+  color: currentColor;
+  cursor: pointer;
+}
+
+.theme-toggle > * {
   width: 2.5rem;
   height: 2.5rem;
-  cursor: pointer;
 }
 
 .carousel {
@@ -30,6 +36,10 @@ h1 {
   top: 50%;
   font-size: 4rem;
   z-index: 10;
+  padding: 0;
+  background: none;
+  border: none;
+  color: currentColor;
   cursor: pointer;
   transition-duration: 0.3s;
 }

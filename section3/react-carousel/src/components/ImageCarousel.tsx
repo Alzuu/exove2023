@@ -46,17 +46,13 @@ function ImageCarousel(props: IImages) {
   }, [changeImageWithKey])
 
   return (
-    <section className='carousel'>
-      <FiArrowLeft
-        aria-label='Previous Image'
-        onClick={prevImage}
-        className='arrow arrow-left'
-      ></FiArrowLeft>
-      <FiArrowRight
-        aria-label='Next Image'
-        onClick={nextImage}
-        className='arrow arrow-right'
-      ></FiArrowRight>
+    <main className='carousel'>
+      <button onClick={prevImage} className='arrow arrow-left'>
+        <FiArrowLeft aria-label='Previous Image'></FiArrowLeft>
+      </button>
+      <button onClick={nextImage} className='arrow arrow-right'>
+        <FiArrowRight aria-label='Next Image'></FiArrowRight>
+      </button>
       {images.map((image, index) => {
         return (
           <div
@@ -71,7 +67,7 @@ function ImageCarousel(props: IImages) {
           </div>
         )
       })}
-    </section>
+    </main>
   )
 }
 
