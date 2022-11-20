@@ -3,6 +3,22 @@
   text-align: center;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin-left: auto;
+}
+
+.theme-toggle {
+  margin-left: auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
 .carousel {
   display: flex;
   justify-content: center;

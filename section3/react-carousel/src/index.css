@@ -4,19 +4,23 @@
   line-height: 24px;
   font-weight: 400;
 
-  color-scheme: light dark;
   --color-light: #224b51;
   --color-dark: #f6a68d;
   --background-color-light: #f8d8cb;
   --background-color-dark: #0e282a;
-  color: var(--color-dark);
-  background-color: var(--background-color-dark);
+  color: var(--color-light);
+  background-color: var(--background-color-light);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.dark-theme {
+  color: var(--color-dark);
+  background-color: var(--background-color-dark);
 }
 
 body {
@@ -30,11 +34,4 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--color-light);
-    background-color: var(--background-color-light);
-  }
 }
