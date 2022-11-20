@@ -14,7 +14,17 @@ function changeTheme() {
   app.classList.toggle('dark')
 }
 
+function preferredTheme() {
+  const app = document.documentElement
+  const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)')
+  if (preferredTheme.matches) {
+    app.classList.toggle('dark')
+  }
+}
+
 function changeSpeed() {
   const loading = document.getElementById('loading')
   loading.classList.toggle('loading-slow')
 }
+
+preferredTheme()
