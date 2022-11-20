@@ -1,11 +1,11 @@
 #root {
   margin: 0 auto;
-  text-align: center;
 }
 
 .header {
   display: flex;
   align-items: center;
+  padding: 0 2rem;
 }
 
 h1 {
@@ -33,7 +33,7 @@ h1 {
 
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 50vh;
   font-size: 4rem;
   z-index: 10;
   padding: 0;
@@ -63,12 +63,13 @@ h1 {
 }
 
 .image {
-  width: 1000px;
-  height: 600px;
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
 .slide {
+  max-width: 90%;
   opacity: 0;
   transition-duration: 0.5s ease-in-out;
 }
